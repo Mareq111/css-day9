@@ -13,7 +13,10 @@ html {
   align-items: center;
   flex-direction: row;
   margin-top: 5rem;
+  z-index: 0;
   /* hills */
+  /* hills font */
+  /* hills back  */
 }
 .container .box {
   width: 25rem;
@@ -29,18 +32,41 @@ html {
   align-items: end;
   flex-direction: row;
   height: 80%;
+  width: 100%;
   margin: 0;
 }
-.container #hill-1 {
+.container .hills-front {
+  display: flex;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
-  left: 30px;
-  top: 50px;
-  width: 15rem;
-  height: 10rem;
+  width: 100%;
   background-color: #756c8b;
   border-radius: 100% 100% 0 0;
   z-index: -1;
+}
+.container #hill-1 {
+  align-items: flex-start;
+  height: 5rem;
+  width: 30rem;
+  top: 1rem;
+  right: 7rem;
+  z-index: -3;
+}
+.container #hill-2 {
+  position: absolute;
+  height: 10rem;
+  width: 18rem;
+  top: 19rem;
+  z-index: -2;
+}
+.container #hill-3 {
+  align-items: flex-end;
+  width: 25rem;
+  height: 5rem;
+  top: 1.5rem;
+  left: 4rem;
+  z-index: -3;
 }
 
 /* weather footer parameters*/
