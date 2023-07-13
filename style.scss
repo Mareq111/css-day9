@@ -24,14 +24,13 @@ html {
   align-items: center;
   flex-direction: row;
   margin-top: 5rem;
-  z-index: 0;
 
   .box {
     width: 25rem;
     height: 25rem;
     background-color: $background-600;
     overflow: hidden;
-    z-index: 0;
+    z-index: 1;
     box-shadow: 1px 1px 6px 1px rgba($color: #3a3441, $alpha: 0.2);
   }
   .animated-background {
@@ -40,46 +39,57 @@ html {
     align-items: end;
     flex-direction: row;
     height: 80%;
-    width: 100%;
-    margin: 0;
+    width: 25rem;
+    overflow: hidden;
   }
-  /* hills */
 
-  /* hills font */
+  /* hills on front */
   .hills-front {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
-    width: 100%;
     background-color: $front-hills-500;
     border-radius: 100% 100% 0 0;
-    z-index: -1;
   }
   #hill-1 {
-    align-items: flex-start;
-    height: 5rem;
-    width: 30rem;
-    top: 1rem;
-    right: 7rem;
-    z-index: -3;
+    right: 4rem;
+    width: 10rem;
+    height: 4rem;
   }
   #hill-2 {
     position: absolute;
-    height: 10rem;
-    width: 18rem;
-    top: 19rem;
-    z-index: -2;
+    height: 6rem;
+    width: 20rem;
   }
   #hill-3 {
-    align-items: flex-end;
-    width: 25rem;
     height: 5rem;
-    top: 1.5rem;
-    left: 4rem;
-    z-index: -3;
+    width: 10rem;
+    left: 14rem;
   }
-  /* hills back  */
+
+  /* hills on back */
+  .hills-back {
+    align-self: center;
+    border-radius: 100% 100% 0 0;
+    background-color: $back-hills-400;
+  }
+  #hill-4 {
+    position: relative;
+    height: 4.3rem;
+    width: 12rem;
+    transform: translateY(5rem);
+
+    z-index: -2;
+  }
+  #hill-5 {
+    position: absolute;
+    height: 4.3rem;
+    width: 12rem;
+    transform: translate(-6.5rem, 5rem);
+    z-index: -2;
+  }
 }
 /* weather footer parameters*/
 .weather-footer {
