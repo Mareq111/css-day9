@@ -4,7 +4,7 @@
 html {
   font-family: "Fira Sans", sans-serif;
   font-size: 16px;
-  color: #3a3441;
+  color: #093843;
 }
 
 .container {
@@ -15,14 +15,15 @@ html {
   margin-top: 5rem;
   /* hills on front */
   /* hills on back */
+  /* moon and craters */
 }
 .container .box {
   width: 25rem;
   height: 25rem;
-  background-color: #5a516c;
+  background-color: #164f5a;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 1px 1px 6px 1px rgba(58, 52, 65, 0.2);
+  box-shadow: 1px 1px 6px 1px rgba(22, 79, 90, 0.2);
 }
 .container .animated-background {
   display: flex;
@@ -39,7 +40,7 @@ html {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-color: #756c8b;
+  background-color: #11808d;
   border-radius: 100% 100% 0 0;
 }
 .container #hill-1 {
@@ -60,7 +61,7 @@ html {
 .container .hills-back {
   align-self: center;
   border-radius: 100% 100% 0 0;
-  background-color: #938aa6;
+  background-color: #0ca1ae;
 }
 .container #hill-4 {
   position: relative;
@@ -75,6 +76,89 @@ html {
   width: 12rem;
   transform: translate(-6.5rem, 5rem);
   z-index: -2;
+}
+.container .moon {
+  position: absolute;
+  overflow: hidden;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #f8f1cd;
+  transform: translate(-8rem, -13rem);
+  box-shadow: 1px 0 10px 3px #f1e096;
+}
+.container .moon-crater {
+  position: relative;
+  background-color: #f1e096;
+  border-radius: 50% 40%;
+}
+.container #crater-1 {
+  width: 0.7rem;
+  height: 0.7rem;
+  left: 1.5rem;
+  top: 0.8rem;
+  opacity: 0.9;
+}
+.container #crater-2 {
+  width: 0.3rem;
+  height: 0.3rem;
+  left: 3rem;
+  top: 0.6rem;
+}
+.container #crater-3 {
+  width: 0.7rem;
+  height: 0.7rem;
+  left: -0.2rem;
+  top: 0.2rem;
+  opacity: 0.6;
+}
+.container #crater-4 {
+  width: 0.2rem;
+  height: 0.2rem;
+  left: 0.9rem;
+  top: 0.3rem;
+  opacity: 0.6;
+}
+.container #crater-5 {
+  width: 0.4rem;
+  height: 0.4rem;
+  left: 1rem;
+  top: 0.8rem;
+  opacity: 0.8;
+}
+.container #crater-6 {
+  width: 0.4rem;
+  height: 0.4rem;
+  left: 1.8rem;
+  top: -0.3rem;
+  opacity: 0.6;
+}
+.container #crater-7 {
+  width: 0.3rem;
+  height: 0.3rem;
+  left: 2.5rem;
+  top: -0.1rem;
+}
+.container #crater-8 {
+  width: 0.3rem;
+  height: 0.3rem;
+  left: 2rem;
+  top: 0.5rem;
+  opacity: 0.8;
+}
+.container #crater-9 {
+  width: 0.6rem;
+  height: 0.6rem;
+  left: 0.9rem;
+  top: 0.15rem;
+  opacity: 0.6;
+}
+.container #crater-10 {
+  width: 0.3rem;
+  height: 0.3rem;
+  left: 3.2em;
+  top: -1.6rem;
+  opacity: 0.8;
 }
 
 /* weather footer parameters*/

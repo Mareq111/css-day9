@@ -1,12 +1,12 @@
 /* font FIRA SANS from google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 /* colors variety */
-$primary-950: #3a3441;
-$background-600: #5a516c;
+$primary-950: #093843;
+$background-800: #164f5a;
 $background-50: #f7f6f9;
-$front-hills-500: #756c8b;
-$back-hills-400: #938aa6;
-$addictional-300: #b9b3c6;
+$front-hills-700: #11808d;
+$back-hills-600: #0ca1ae;
+$addictional-500: #0bc9cf;
 $moon: #f8f1cd;
 $craters: #f1e096;
 $rain-drops-300: #c4ddf3;
@@ -28,10 +28,10 @@ html {
   .box {
     width: 25rem;
     height: 25rem;
-    background-color: $background-600;
+    background-color: $background-800;
     overflow: hidden;
     z-index: 1;
-    box-shadow: 1px 1px 6px 1px rgba($color: #3a3441, $alpha: 0.2);
+    box-shadow: 1px 1px 6px 1px rgba($background-800, $alpha: 0.2);
   }
   .animated-background {
     display: flex;
@@ -50,7 +50,7 @@ html {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background-color: $front-hills-500;
+    background-color: $front-hills-700;
     border-radius: 100% 100% 0 0;
   }
   #hill-1 {
@@ -73,14 +73,13 @@ html {
   .hills-back {
     align-self: center;
     border-radius: 100% 100% 0 0;
-    background-color: $back-hills-400;
+    background-color: $back-hills-600;
   }
   #hill-4 {
     position: relative;
     height: 4.3rem;
     width: 12rem;
     transform: translateY(5rem);
-
     z-index: -2;
   }
   #hill-5 {
@@ -89,6 +88,91 @@ html {
     width: 12rem;
     transform: translate(-6.5rem, 5rem);
     z-index: -2;
+  }
+
+  /* moon and craters */
+  .moon {
+    position: absolute;
+    overflow: hidden;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: $moon;
+    transform: translate(-8rem, -13rem);
+    box-shadow: 1px 0 10px 3px $craters;
+  }
+  .moon-crater {
+    position: relative;
+    background-color: $craters;
+    border-radius: 50% 40%;
+  }
+  #crater-1 {
+    width: 0.7rem;
+    height: 0.7rem;
+    left: 1.5rem;
+    top: 0.8rem;
+    opacity: 0.9;
+  }
+  #crater-2 {
+    width: 0.3rem;
+    height: 0.3rem;
+    left: 3rem;
+    top: 0.6rem;
+  }
+  #crater-3 {
+    width: 0.7rem;
+    height: 0.7rem;
+    left: -0.2rem;
+    top: 0.2rem;
+    opacity: 0.6;
+  }
+  #crater-4 {
+    width: 0.2rem;
+    height: 0.2rem;
+    left: 0.9rem;
+    top: 0.3rem;
+    opacity: 0.6;
+  }
+  #crater-5 {
+    width: 0.4rem;
+    height: 0.4rem;
+    left: 1rem;
+    top: 0.8rem;
+    opacity: 0.8;
+  }
+  #crater-6 {
+    width: 0.4rem;
+    height: 0.4rem;
+    left: 1.8rem;
+    top: -0.3rem;
+    opacity: 0.6;
+  }
+  #crater-7 {
+    width: 0.3rem;
+    height: 0.3rem;
+    left: 2.5rem;
+    top: -0.1rem;
+  }
+  #crater-8 {
+    width: 0.3rem;
+    height: 0.3rem;
+    left: 2rem;
+    top: 0.5rem;
+    opacity: 0.8;
+  }
+  #crater-9 {
+    width: 0.6rem;
+    height: 0.6rem;
+    left: 0.9rem;
+    top: 0.15rem;
+    opacity: 0.6;
+  }
+  #crater-10 {
+    width: 0.3rem;
+    height: 0.3rem;
+    left: 3.2em;
+    top: -1.6rem;
+    opacity: 0.8;
   }
 }
 /* weather footer parameters*/
