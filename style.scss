@@ -32,12 +32,13 @@ html {
     overflow: hidden;
     z-index: 1;
     box-shadow: 1px 1px 6px 1px rgba($background-800, $alpha: 0.2);
+    position: relative;
   }
+
   .animated-background {
     display: flex;
     justify-content: center;
     align-items: end;
-    flex-direction: row;
     height: 80%;
     width: 25rem;
     overflow: hidden;
@@ -52,17 +53,21 @@ html {
     overflow: hidden;
     background-color: $front-hills-700;
     border-radius: 100% 100% 0 0;
+    box-shadow: 0px 0px 0.2px rgba(22, 79, 90, 0.2);
   }
+
   #hill-1 {
     right: 4rem;
     width: 10rem;
     height: 4rem;
   }
+
   #hill-2 {
     position: absolute;
     height: 6rem;
     width: 20rem;
   }
+
   #hill-3 {
     height: 5rem;
     width: 10rem;
@@ -74,7 +79,9 @@ html {
     align-self: center;
     border-radius: 100% 100% 0 0;
     background-color: $back-hills-600;
+    box-shadow: 0 1px 3px 2px $addictional-500;
   }
+
   #hill-4 {
     position: relative;
     height: 4.3rem;
@@ -82,6 +89,7 @@ html {
     transform: translateY(5rem);
     z-index: -2;
   }
+
   #hill-5 {
     position: absolute;
     height: 4.3rem;
@@ -99,13 +107,15 @@ html {
     border-radius: 50%;
     background-color: $moon;
     transform: translate(-8rem, -13rem);
-    box-shadow: 1px 0 10px 3px $craters;
+    animation: rise 3s linear forwards;
   }
+
   .moon-crater {
     position: relative;
     background-color: $craters;
     border-radius: 50% 40%;
   }
+
   #crater-1 {
     width: 0.7rem;
     height: 0.7rem;
@@ -113,12 +123,14 @@ html {
     top: 0.8rem;
     opacity: 0.9;
   }
+
   #crater-2 {
     width: 0.3rem;
     height: 0.3rem;
     left: 3rem;
     top: 0.6rem;
   }
+
   #crater-3 {
     width: 0.7rem;
     height: 0.7rem;
@@ -126,6 +138,7 @@ html {
     top: 0.2rem;
     opacity: 0.6;
   }
+
   #crater-4 {
     width: 0.2rem;
     height: 0.2rem;
@@ -133,6 +146,7 @@ html {
     top: 0.3rem;
     opacity: 0.6;
   }
+
   #crater-5 {
     width: 0.4rem;
     height: 0.4rem;
@@ -140,6 +154,7 @@ html {
     top: 0.8rem;
     opacity: 0.8;
   }
+
   #crater-6 {
     width: 0.4rem;
     height: 0.4rem;
@@ -147,12 +162,14 @@ html {
     top: -0.3rem;
     opacity: 0.6;
   }
+
   #crater-7 {
     width: 0.3rem;
     height: 0.3rem;
     left: 2.5rem;
     top: -0.1rem;
   }
+
   #crater-8 {
     width: 0.3rem;
     height: 0.3rem;
@@ -160,6 +177,7 @@ html {
     top: 0.5rem;
     opacity: 0.8;
   }
+
   #crater-9 {
     width: 0.6rem;
     height: 0.6rem;
@@ -167,6 +185,7 @@ html {
     top: 0.15rem;
     opacity: 0.6;
   }
+
   #crater-10 {
     width: 0.3rem;
     height: 0.3rem;
@@ -174,48 +193,253 @@ html {
     top: -1.6rem;
     opacity: 0.8;
   }
-}
-/* weather footer parameters*/
-.weather-footer {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  height: 20%;
-  width: 100%;
-  overflow: hidden;
-  background-color: $background-50;
-}
 
-#temperature {
-  font-size: 2.7rem;
-  font-weight: 200;
-  padding: 1rem;
-}
+  /* all rain drops */
 
-.weather-parameters {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 300;
-  padding-right: 5rem;
-}
+  .rain-drop {
+    position: absolute;
+    background-color: $rain-drops-300;
+    transform: translateX(-50%);
+    width: 0.8rem;
+    height: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
 
-.future-weather {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  font-weight: 300;
-}
+  /* big rain drops */
+  #drop-1-big {
+    top: -5rem;
+    left: 50%;
+    animation: raindrop-fall-big 1s linear infinite;
+  }
 
-#weather-tue {
-  align-self: flex-end;
-  margin-bottom: 0.5rem;
-}
-#strong-tue,
-#strong-wed {
-  font-weight: 400;
-  padding-left: 0.5rem;
-}
-#weather-wed {
-  align-self: flex-end;
+  #drop-2-big {
+    top: -5rem;
+    left: 20%;
+    animation: raindrop-fall-big 1.7s linear infinite;
+  }
+
+  #drop-3-big {
+    top: -5rem;
+    left: 90%;
+    animation: raindrop-fall-big 0.9s linear infinite;
+  }
+
+  #drop-4-big {
+    top: -5rem;
+    left: 70%;
+    animation: raindrop-fall-big 1.3s linear infinite;
+  }
+
+  /* medium rain drops */
+  #drop-5-medium {
+    top: -5rem;
+    left: 60%;
+    animation: raindrop-fall-medium 1.3s linear infinite;
+  }
+
+  #drop-6-medium {
+    top: -5rem;
+    left: 35%;
+    animation: raindrop-fall-medium 1.8s linear infinite;
+  }
+
+  #drop-7-medium {
+    top: -5rem;
+    left: 5%;
+    animation: raindrop-fall-medium 1.4s linear infinite;
+  }
+
+  #drop-8-medium {
+    top: -5rem;
+    left: 105%;
+    animation: raindrop-fall-medium 1.4s linear infinite;
+  }
+
+  /* rain drops small */
+  #drop-9-small {
+    top: -5rem;
+    left: 2%;
+    animation: raindrop-fall-small 1s linear infinite;
+  }
+
+  #drop-10-small {
+    top: -5rem;
+    left: 12%;
+    animation: raindrop-fall-small 1.6s linear infinite;
+  }
+
+  #drop-11-small {
+    top: -5rem;
+    left: 42%;
+    animation: raindrop-fall-small 1.2s linear infinite;
+  }
+
+  #drop-12-small {
+    top: -5rem;
+    left: 82%;
+    animation: raindrop-fall-small 1.7s linear infinite;
+  }
+
+  #drop-13-small {
+    top: -5rem;
+    left: 22%;
+    animation: raindrop-fall-small 1.9s linear infinite;
+  }
+
+  #drop-14-small {
+    top: -5rem;
+    left: 52%;
+    animation: raindrop-fall-small 1.6s linear infinite;
+  }
+
+  #drop-15-small {
+    top: -5rem;
+    left: 92%;
+    animation: raindrop-fall-small 1s linear infinite;
+  }
+
+  /* weather footer parameters*/
+
+  .weather-footer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    background-color: $background-50;
+  }
+
+  #temperature {
+    font-size: 2.7rem;
+    font-weight: 200;
+    padding: 1rem;
+  }
+
+  .weather-parameters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    padding-right: 5rem;
+  }
+
+  .future-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: 300;
+  }
+
+  #weather-tue {
+    align-self: flex-end;
+    margin-bottom: 0.5rem;
+  }
+
+  #strong-tue,
+  #strong-wed {
+    font-weight: 400;
+    padding-left: 0.5rem;
+  }
+
+  #weather-wed {
+    align-self: flex-end;
+  }
+
+  /* animation raining big */
+
+  @keyframes raindrop-fall-big {
+    0% {
+      border-radius: 50% 0 50% 50%;
+      transform: translateY(5rem) rotate(-30deg);
+    }
+
+    95% {
+      transform: translateY(24.2rem) rotate(-30deg);
+      height: 0.8rem;
+      width: 0.9rem;
+      border-radius: 50% 10% 50% 50%;
+      opacity: 0.4;
+    }
+
+    98% {
+      transform: translateY(24.7rem);
+      border-radius: 50% 40% 30% 20%;
+      height: 0.5rem;
+      width: 1.5rem;
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: translateY(24.8rem);
+      opacity: 0;
+    }
+  }
+
+  /* raining medium */
+  @keyframes raindrop-fall-medium {
+    0% {
+      border-radius: 50% 0 50% 50%;
+      transform: translateY(5rem) rotate(-30deg) scale(0.6);
+    }
+
+    95% {
+      transform: translateY(24.2rem) rotate(-30deg) scale(0.6);
+      height: 0.8rem;
+      width: 0.9rem;
+      border-radius: 50% 10% 50% 50%;
+      opacity: 0.4;
+    }
+
+    98% {
+      transform: translateY(24.7rem) scale(0.6);
+      border-radius: 50% 40% 30% 20%;
+      height: 0.5rem;
+      width: 1.5rem;
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: translateY(24.8rem);
+      opacity: 0.1;
+    }
+  }
+  /* raining small */
+  @keyframes raindrop-fall-small {
+    0% {
+      border-radius: 50% 0 50% 50%;
+      transform: translateY(5rem) rotate(-30deg) scale(0.3);
+    }
+
+    95% {
+      transform: translateY(24.2rem) rotate(-30deg) scale(0.3);
+      height: 0.8rem;
+      width: 0.9rem;
+      border-radius: 50% 10% 50% 50%;
+      opacity: 0.4;
+    }
+
+    98% {
+      transform: translateY(24.7rem) scale(0.3);
+      border-radius: 50% 40% 30% 20%;
+      height: 0.5rem;
+      width: 1.5rem;
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: translateY(24.8rem);
+      opacity: 0.3;
+    }
+  }
+  /* animated moon */
+  @keyframes rise {
+    from {
+      transform: translate(-17rem, -10rem);
+      box-shadow: 1px 0 10px 10px $craters;
+    }
+    to {
+      transform: translate(-8rem, -13rem);
+      box-shadow: 1px 0 10px 3px $craters;
+    }
+  }
 }
